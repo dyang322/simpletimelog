@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		136196DBB38BF438D94E0B71 /* Pods_SimpleTimeLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF267FC854B607009D76C020 /* Pods_SimpleTimeLog.framework */; };
 		3D0DC2F925F9E29E0097612C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0DC2F825F9E29E0097612C /* AppDelegate.swift */; };
 		3D0DC2FB25F9E29E0097612C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0DC2FA25F9E29E0097612C /* SceneDelegate.swift */; };
 		3D0DC2FD25F9E29E0097612C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0DC2FC25F9E29E0097612C /* ViewController.swift */; };
 		3D0DC30025F9E29E0097612C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0DC2FE25F9E29E0097612C /* Main.storyboard */; };
 		3D0DC30225F9E2A10097612C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D0DC30125F9E2A10097612C /* Assets.xcassets */; };
 		3D0DC30525F9E2A10097612C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0DC30325F9E2A10097612C /* LaunchScreen.storyboard */; };
+		3D94844E2601CB7E000BA21B /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94844D2601CB7E000BA21B /* RightViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20D8B933DE0AF2F5B5AF17EC /* Pods-SimpleTimeLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTimeLog.release.xcconfig"; path = "Target Support Files/Pods-SimpleTimeLog/Pods-SimpleTimeLog.release.xcconfig"; sourceTree = "<group>"; };
 		3D0DC2F525F9E29E0097612C /* SimpleTimeLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTimeLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0DC2F825F9E29E0097612C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D0DC2FA25F9E29E0097612C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		3D0DC30125F9E2A10097612C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D0DC30425F9E2A10097612C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D0DC30625F9E2A10097612C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D94844D2601CB7E000BA21B /* RightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		FBEA0094EC679D8FD46241E5 /* Pods-SimpleTimeLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTimeLog.debug.xcconfig"; path = "Target Support Files/Pods-SimpleTimeLog/Pods-SimpleTimeLog.debug.xcconfig"; sourceTree = "<group>"; };
+		FF267FC854B607009D76C020 /* Pods_SimpleTimeLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTimeLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136196DBB38BF438D94E0B71 /* Pods_SimpleTimeLog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				3D0DC2F725F9E29E0097612C /* SimpleTimeLog */,
 				3D0DC2F625F9E29E0097612C /* Products */,
+				5930F780E6C0E9CE0FF57F4C /* Pods */,
+				90EEB19DEE5538248F06FAE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,7 @@
 		3D0DC2F725F9E29E0097612C /* SimpleTimeLog */ = {
 			isa = PBXGroup;
 			children = (
+				3D94844D2601CB7E000BA21B /* RightViewController.swift */,
 				3D0DC2F825F9E29E0097612C /* AppDelegate.swift */,
 				3D0DC2FA25F9E29E0097612C /* SceneDelegate.swift */,
 				3D0DC2FC25F9E29E0097612C /* ViewController.swift */,
@@ -67,6 +77,24 @@
 			path = SimpleTimeLog;
 			sourceTree = "<group>";
 		};
+		5930F780E6C0E9CE0FF57F4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBEA0094EC679D8FD46241E5 /* Pods-SimpleTimeLog.debug.xcconfig */,
+				20D8B933DE0AF2F5B5AF17EC /* Pods-SimpleTimeLog.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		90EEB19DEE5538248F06FAE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF267FC854B607009D76C020 /* Pods_SimpleTimeLog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D0DC30925F9E2A10097612C /* Build configuration list for PBXNativeTarget "SimpleTimeLog" */;
 			buildPhases = (
+				CA721A446CC86466853CCDA7 /* [CP] Check Pods Manifest.lock */,
 				3D0DC2F125F9E29E0097612C /* Sources */,
 				3D0DC2F225F9E29E0097612C /* Frameworks */,
 				3D0DC2F325F9E29E0097612C /* Resources */,
+				217A28307F075D3FAF368748 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -98,6 +128,7 @@
 				TargetAttributes = {
 					3D0DC2F425F9E29E0097612C = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -132,12 +163,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		217A28307F075D3FAF368748 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleTimeLog/Pods-SimpleTimeLog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleTimeLog/Pods-SimpleTimeLog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleTimeLog/Pods-SimpleTimeLog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA721A446CC86466853CCDA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleTimeLog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D0DC2F125F9E29E0097612C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3D0DC2FD25F9E29E0097612C /* ViewController.swift in Sources */,
+				3D94844E2601CB7E000BA21B /* RightViewController.swift in Sources */,
 				3D0DC2F925F9E29E0097612C /* AppDelegate.swift in Sources */,
 				3D0DC2FB25F9E29E0097612C /* SceneDelegate.swift in Sources */,
 			);
@@ -283,9 +357,11 @@
 		};
 		3D0DC30A25F9E2A10097612C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBEA0094EC679D8FD46241E5 /* Pods-SimpleTimeLog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpleTimeLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,6 +370,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dyang.SimpleTimeLog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,9 +378,11 @@
 		};
 		3D0DC30B25F9E2A10097612C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20D8B933DE0AF2F5B5AF17EC /* Pods-SimpleTimeLog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpleTimeLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
