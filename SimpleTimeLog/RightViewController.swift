@@ -12,11 +12,10 @@ class RightViewController: UIViewController, FSCalendarDelegate {
     
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var details: UILabel!
-    
-    
+    var calendarData:[String:String]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         calendar.delegate = self
         calendar.appearance.titleFont = UIFont.systemFont(ofSize: 16.0)
         calendar.appearance.headerTitleFont = UIFont.systemFont(ofSize: 16.0)
@@ -33,15 +32,14 @@ class RightViewController: UIViewController, FSCalendarDelegate {
         self.view.addGestureRecognizer(rightSwipe)
     }
   
+
+    
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition)
     {
-        let vc = ViewController()
-
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE MM-dd-YYYY"
         let dateSelected = formatter.string(from: date)
-        print(vc.savedData)
-        details.text = dateSelected
+        details.text = "\(dateSelected) \(String(calendarData[dateSelected]!))"
     }
 
     

@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     var timer1ArrayString:String = ""
     var timer2ArrayString:String = ""
     var savedData:String = ""
-
+    var calendarData:[String:String] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +58,11 @@ class ViewController: UIViewController {
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(leftSwipe)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let rightVC = segue.destination as? RightViewController else {return}
+        rightVC.calendarData = calendarData
     }
     
     @IBAction func counter1PlusTapped(_ sender: Any) {
@@ -256,10 +261,17 @@ class ViewController: UIViewController {
         let todayDate = dateString()
         timer1ArrayCount = timer1Array.count
         timer2ArrayCount = timer2Array.count
-        savedData = "on \(todayDate) \n wet diaper \(counter1Int) \n poop diaper \(counter2Int) \n pump \(timer1ArrayCount) times at \(timer1Array) \n feed \(timer2ArrayCount) times at \(timer2Array)"
-        print(savedData)
+        savedData = "wet diaper \(counter1Int) poop diaper \(counter2Int) pump \(timer1ArrayCount) times at \(timer1ArrayString) feed \(timer2ArrayCount) times at \(timer2ArrayString)"
+        calendarData[todayDate] = savedData
+        print(calendarData)     
     }
-    
+//
+//    func openNextPage() {
+//      let vc2 = RightViewController()
+//      print(calendarData)
+//      vc2.calendarData = calendarData
+//      self.present(vc2, animated:true)
+//    }
 }
 
 
