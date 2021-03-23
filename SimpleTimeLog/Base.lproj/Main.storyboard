@@ -222,30 +222,25 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zCM-b8-BKx">
-                                <rect key="frame" x="20" y="358" width="374" height="463"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcz-U1-gcp">
-                                        <rect key="frame" x="8" y="28" width="358" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="899-su-tDq"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="6dC-YP-Aby"/>
-                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DateSelected" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gj-UG-O9a">
+                                <rect key="frame" x="20" y="397" width="374" height="427"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xuk-Wx-3O6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xuk-Wx-3O6" firstAttribute="bottom" secondItem="5gj-UG-O9a" secondAttribute="bottom" constant="38" id="0kg-tB-KQQ"/>
+                            <constraint firstItem="5gj-UG-O9a" firstAttribute="centerX" secondItem="Xuk-Wx-3O6" secondAttribute="centerX" id="pbX-En-CN1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xHK-Vy-Z6Z"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="calendar" destination="aXr-Yk-sJu" id="C3b-Qy-geh"/>
-                        <outlet property="details" destination="Mcz-U1-gcp" id="QUH-Kn-czS"/>
+                        <outlet property="details" destination="5gj-UG-O9a" id="dkL-Il-oKU"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="swipeRight" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="FtK-lO-HJo"/>
                     </connections>
                 </viewController>

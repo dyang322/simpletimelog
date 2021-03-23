@@ -39,7 +39,9 @@ class RightViewController: UIViewController, FSCalendarDelegate {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE MM-dd-YYYY"
         let dateSelected = formatter.string(from: date)
-        details.text = "\(dateSelected) \(String(calendarData[dateSelected]!))"
+        let detailsValue = calendarData[dateSelected]
+        details.text = "\(dateSelected) \n \(detailsValue!)"
+        
     }
 
     
