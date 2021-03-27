@@ -49,8 +49,13 @@ class ViewController: UIViewController {
     var timer2ArrayCount:Int = 0
     var timer1ArrayString:String = ""
     var timer2ArrayString:String = ""
-    var savedData:String = ""
-    var calendarData:[String:String] = [:]
+    var savedData:[String] = []
+    var calendarData:[String:[String]] = [:]
+    var timer1ArrayCountString:String = ""
+    var timer2ArrayCountString:String = ""
+    var counter1IntStr:String = ""
+    var counter2IntStr:String = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -260,18 +265,17 @@ class ViewController: UIViewController {
     @IBAction func saveTapped(_ sender: Any) {
         let todayDate = dateString()
         timer1ArrayCount = timer1Array.count
+        timer1ArrayCountString = String(timer1ArrayCount)
         timer2ArrayCount = timer2Array.count
-        savedData = "wet diaper \(counter1Int) poop diaper \(counter2Int) pump \(timer1ArrayCount) times at \(timer1ArrayString) feed \(timer2ArrayCount) times at \(timer2ArrayString)"
+        timer2ArrayCountString = String(timer2ArrayCount)
+        counter1IntStr = String(counter1Int)
+        counter2IntStr = String(counter2Int)
+
+
+        savedData = ["wet diaper", counter1IntStr, "poop diaper", counter2IntStr, "pump", timer1ArrayCountString, "times at", timer1ArrayString ,"feed", timer2ArrayCountString, "times at", timer2ArrayString]
         calendarData[todayDate] = savedData
         print(calendarData)     
     }
-//
-//    func openNextPage() {
-//      let vc2 = RightViewController()
-//      print(calendarData)
-//      vc2.calendarData = calendarData
-//      self.present(vc2, animated:true)
-//    }
 }
 
 
