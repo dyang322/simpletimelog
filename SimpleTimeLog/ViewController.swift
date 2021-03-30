@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
 
@@ -56,9 +57,22 @@ class ViewController: UIViewController {
     var counter1IntStr:String = ""
     var counter2IntStr:String = ""
 
+    let userDefaults = UserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let counter1UD = userDefaults.value(forKey: "count1UD")
+        {
+            counter1.text = "\(counter1UD)"
+            counter1Int = counter1UD as! Int
+        }
+        if let counter2UD = userDefaults.value(forKey: "count2UD")
+        {
+            counter2.text = "\(counter2UD)"
+            counter2Int = counter2UD as! Int
+
+        }
         
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
         leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
@@ -72,14 +86,23 @@ class ViewController: UIViewController {
     
     @IBAction func counter1PlusTapped(_ sender: Any) {
         counter1Int = counter1Int + 1
-        counter1.text = "\(counter1Int)"
+        userDefaults.set(counter1Int, forKey: "count1UD")
+        if let counter1UD = userDefaults.value(forKey: "count1UD")
+        {
+            counter1.text = "\(counter1UD)"
+        }
+        
     }
     
     @IBAction func counter1MinusTapped(_ sender: Any) {
         if(counter1Int > 0)
           {
             counter1Int = counter1Int - 1
-            counter1.text = "\(counter1Int)"
+            userDefaults.set(counter1Int, forKey: "count1UD")
+            if let counter1UD = userDefaults.value(forKey: "count1UD")
+            {
+                counter1.text = "\(counter1UD)"
+            }
            }
         else
         {
@@ -90,14 +113,22 @@ class ViewController: UIViewController {
     
     @IBAction func counter2PlusTapped(_ sender: Any) {
         counter2Int = counter2Int + 1
-        counter2.text = "\(counter2Int)"
+        userDefaults.set(counter2Int, forKey: "count2UD")
+        if let counter2UD = userDefaults.value(forKey: "count2UD")
+        {
+            counter2.text = "\(counter2UD)"
+        }
     }
     
     @IBAction func counter2MinusTapped(_ sender: Any) {
         if(counter2Int > 0)
           {
             counter2Int = counter2Int - 1
-            counter2.text = "\(counter2Int)"
+            userDefaults.set(counter2Int, forKey: "count2UD")
+            if let counter2UD = userDefaults.value(forKey: "count2UD")
+            {
+                counter2.text = "\(counter2UD)"
+            }
            }
         else
         {
@@ -260,6 +291,10 @@ class ViewController: UIViewController {
         
         timer1Array.removeAll()
         timer2Array.removeAll()
+        
+        userDefaults.removeObject(forKey: "count1UD")
+        userDefaults.removeObject(forKey: "count2UD")
+
     }
     
     @IBAction func saveTapped(_ sender: Any) {
